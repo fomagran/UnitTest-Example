@@ -13,8 +13,8 @@
 		0401A47E266DE0E10077E5DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0401A47C266DE0E10077E5DA /* Main.storyboard */; };
 		0401A480266DE0E20077E5DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0401A47F266DE0E20077E5DA /* Assets.xcassets */; };
 		0401A483266DE0E20077E5DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0401A481266DE0E20077E5DA /* LaunchScreen.storyboard */; };
-		0401A491266DE0F40077E5DA /* UnitTest_ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0401A490266DE0F40077E5DA /* UnitTest_ExampleTests.swift */; };
-		0401A499266DF4D70077E5DA /* UserModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0401A498266DF4D70077E5DA /* UserModelTests.swift */; };
+		0401A49B266E0A740077E5DA /* SignUpModelValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0401A49A266E0A740077E5DA /* SignUpModelValidatorTests.swift */; };
+		0401A49E266E0B2A0077E5DA /* SignUpModelValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0401A49D266E0B2A0077E5DA /* SignUpModelValidator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,9 +37,9 @@
 		0401A482266DE0E20077E5DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0401A484266DE0E20077E5DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0401A48E266DE0F40077E5DA /* UnitTest ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UnitTest ExampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0401A490266DE0F40077E5DA /* UnitTest_ExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTest_ExampleTests.swift; sourceTree = "<group>"; };
 		0401A492266DE0F40077E5DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0401A498266DF4D70077E5DA /* UserModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModelTests.swift; sourceTree = "<group>"; };
+		0401A49A266E0A740077E5DA /* SignUpModelValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModelValidatorTests.swift; sourceTree = "<group>"; };
+		0401A49D266E0B2A0077E5DA /* SignUpModelValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModelValidator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +81,7 @@
 		0401A475266DE0E10077E5DA /* UnitTest Example */ = {
 			isa = PBXGroup;
 			children = (
+				0401A49C266E0B160077E5DA /* PhotoApp */,
 				0401A476266DE0E10077E5DA /* AppDelegate.swift */,
 				0401A478266DE0E10077E5DA /* SceneDelegate.swift */,
 				0401A47A266DE0E10077E5DA /* ViewController.swift */,
@@ -95,11 +96,18 @@
 		0401A48F266DE0F40077E5DA /* UnitTest ExampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				0401A490266DE0F40077E5DA /* UnitTest_ExampleTests.swift */,
 				0401A492266DE0F40077E5DA /* Info.plist */,
-				0401A498266DF4D70077E5DA /* UserModelTests.swift */,
+				0401A49A266E0A740077E5DA /* SignUpModelValidatorTests.swift */,
 			);
 			path = "UnitTest ExampleTests";
+			sourceTree = "<group>";
+		};
+		0401A49C266E0B160077E5DA /* PhotoApp */ = {
+			isa = PBXGroup;
+			children = (
+				0401A49D266E0B2A0077E5DA /* SignUpModelValidator.swift */,
+			);
+			path = PhotoApp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +162,7 @@
 					};
 					0401A48D266DE0F30077E5DA = {
 						CreatedOnToolsVersion = 12.5;
+						LastSwiftMigration = 1250;
 						TestTargetID = 0401A472266DE0E10077E5DA;
 					};
 				};
@@ -204,6 +213,7 @@
 			files = (
 				0401A47B266DE0E10077E5DA /* ViewController.swift in Sources */,
 				0401A477266DE0E10077E5DA /* AppDelegate.swift in Sources */,
+				0401A49E266E0B2A0077E5DA /* SignUpModelValidator.swift in Sources */,
 				0401A479266DE0E10077E5DA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -212,8 +222,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0401A499266DF4D70077E5DA /* UserModelTests.swift in Sources */,
-				0401A491266DE0F40077E5DA /* UnitTest_ExampleTests.swift in Sources */,
+				0401A49B266E0A740077E5DA /* SignUpModelValidatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +414,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2F54VR68GM;
 				INFOPLIST_FILE = "UnitTest ExampleTests/Info.plist";
@@ -415,6 +425,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fomagran.UnitTest-ExampleTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UnitTest Example.app/UnitTest Example";
@@ -425,6 +436,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2F54VR68GM;
 				INFOPLIST_FILE = "UnitTest ExampleTests/Info.plist";
