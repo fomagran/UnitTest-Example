@@ -10,7 +10,7 @@ import Foundation
 class SignUpModelValidator {
     
     func isFirstNameValid(firstName:String) -> Bool {
-        return firstName.isEmpty ? false : true
+        return firstName.count < 2 ? false : true
     }
     
 }

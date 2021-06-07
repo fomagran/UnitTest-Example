@@ -9,25 +9,30 @@ import XCTest
 @testable import UnitTest_Example
 
 class SignUpModelValidatorTests: XCTestCase {
+    
+    var systemUnderTest:SignUpModelValidator!
 
     override func setUp() {
-        print("set up")
+        systemUnderTest = SignUpModelValidator()
     }
     
     override func tearDown() {
-        print("tear dwon")
+        systemUnderTest = nil
     }
     
     func testSignUpModelValidator_WhenValidFirstNameProvided_ShouldReturnTrue() {
-        
-        //Arrange
-        let systemUnderTest = SignUpModelValidator()
-        
+            
         //Act
         let isFirstNameValid = systemUnderTest.isFirstNameValid(firstName:"An")
         
         //Assert
-        XCTAssertTrue(isFirstNameValid,"The isFirstNameValid() should have returned TRUE for a valid firs name but returned FALSE")
+        XCTAssertTrue(isFirstNameValid,"The isFirstNameValid() should have returned TRUE for a valid first name but returned FALSE")
+    }
+    
+    func testSignUpModelValidator_WhenTooShortFirstNameProvided_ShouldReturnFalse() {
+        
+        let isFirstNameValid = systemUnderTest.isFirstNameValid(firstName: "a")
+        XCTAssertFalse(isFirstNameValid,"The isFirstNameValid() should have returned FALSE for a first name that is shorter than 2 charaters but it has returned TRUE")
     }
 
 }
