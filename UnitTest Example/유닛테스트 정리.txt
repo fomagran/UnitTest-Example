@@ -1,0 +1,72 @@
+유닛 테스트
+
+유닛 테스트는 실제 데이터를 받지 않고 가짜 데이터(더미 데이터)를 사용해서 빠르게 테스트한다.
+
+유닛테스트는 가짜 데이터로 빠르게 테스트 하는 것이고 인터그레이션 테스트는 실제 데이터를 가지고 테스트 하는 것이고
+
+유아이 테스트는 실제 유저의 인터랙션을 받아들여 테스트를 하는 것이다.
+
+F.I.R.S.T 원칙이란?
+
+Fast - 유닛 테스트는 빨라야 한다.
+
+Independent - 유닛 테스트는 독립적이여야 한다.
+
+Repeatable - 유닛 테스트는 반복 가능해야한다. 어느 컴퓨터에서든 어느 시점에 실행하든 똑같은 결과를 반환해야 한다.
+
+Self-vlidating  - 유닛 테스트는 그 자체로 값이 옳은지 아닌지 판단해야 한다.
+
+Thorough & Timely - 최댓값과 최솟값을 아우러 모든 값을 테스트할 수 있어야 하고 즉각 나와야한다.
+
+Life Cycle
+
+Red 실패하는 경우 작성
+
+Green 성공하는 경우 작성
+
+Refactor 테스트 코드를 더 깨끗하게 바꿈
+
+Repeat 반복해본다
+
+//가장 기본으로 설정되는 메소드 4개 설명
+//티어 다운 라이프 사이클
+
+셋업과 티어다운은 모든 테스트에서 시작과 끝에 발동된다.
+
+테스트는 이름 순으로 정렬되어서 어떤 순서로 쓰든간 이르므 순으로 실행된다.
+
+테스트 이름 정하는법
+
+시작에 test라고 달려있어야함
+알규먼트가 포함되면 안된다
+반환값이 포함되면 안된다.
+보통은 test<System Under Test>_<Condition Or Statte Change>_<Expected Resultt>()로 지음
+Ex) UserModel_WhenUserInputName_NameShouldNotHaveKorean()
+
+
+코드 커버리지를 이용해서 얼마나 유닛테스트를 했는지 알 수 있다.
+
+Arrange Act Assert (Given,When,Then)
+
+프로퍼티들을 정렬하고
+
+테스트를 하려고 하는 구문을 실행한다.
+
+해당 구문이 통과하는지 실패하는지 확고히 한다.
+
+Assertions
+
+XCTAssertTrue -> 결과값이 무조건 참이다.
+XCTAssertFalse -> 결과값이 무조건 거짓이다.
+XCTAssertNil -> 무조건 nil값을 반환한다.
+XCTAssertNotNil -> 무조건 nil이 아니다.
+XCTUnwrap -> 언래핑한 값이 무조건 nil이 아님
+XCTAssertEqual -> 두 개의 결과가 같음
+XCTAssertNotEqual -> 두 개의 결과가 같지 않음
+XCTAssertGreaterThan -> 한 쪽이  다른쪽 보다 더 큼
+XCTAssertLessThan -> 한 쪽이  다른쪽 보다 더 작음
+XCTAssertLessThanOrEqual -> 한 쪽이  다른쪽보다 같거나 큼
+XCTAssertEqusl -> 두 개의 것이 accuracy 차이만큼 난다. (0.01,0.02,accuracy:0.01)
+XCTFail -> 무조건 실패하게 한다.
+XCTAssertThrowsError -> 에러를 반환함.
+

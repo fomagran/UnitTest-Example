@@ -16,6 +16,7 @@
 		0401A49B266E0A740077E5DA /* SignUpModelValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0401A49A266E0A740077E5DA /* SignUpModelValidatorTests.swift */; };
 		0401A49E266E0B2A0077E5DA /* SignUpModelValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0401A49D266E0B2A0077E5DA /* SignUpModelValidator.swift */; };
 		0401A4A0266E0E7D0077E5DA /* SignUpConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0401A49F266E0E7D0077E5DA /* SignUpConstants.swift */; };
+		0401A4A3266E15150077E5DA /* 유닛테스트 정리.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0401A4A2266E15150077E5DA /* 유닛테스트 정리.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,8 @@
 		0401A49A266E0A740077E5DA /* SignUpModelValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModelValidatorTests.swift; sourceTree = "<group>"; };
 		0401A49D266E0B2A0077E5DA /* SignUpModelValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModelValidator.swift; sourceTree = "<group>"; };
 		0401A49F266E0E7D0077E5DA /* SignUpConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpConstants.swift; sourceTree = "<group>"; };
+		0401A4A1266E14E80077E5DA /* 유닛테스트 정리.pages */ = {isa = PBXFileReference; lastKnownFileType = file; path = "유닛테스트 정리.pages"; sourceTree = "<group>"; };
+		0401A4A2266E15150077E5DA /* 유닛테스트 정리.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "유닛테스트 정리.txt"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +94,8 @@
 				0401A47F266DE0E20077E5DA /* Assets.xcassets */,
 				0401A481266DE0E20077E5DA /* LaunchScreen.storyboard */,
 				0401A484266DE0E20077E5DA /* Info.plist */,
+				0401A4A2266E15150077E5DA /* 유닛테스트 정리.txt */,
+				0401A4A1266E14E80077E5DA /* 유닛테스트 정리.pages */,
 			);
 			path = "UnitTest Example";
 			sourceTree = "<group>";
@@ -195,6 +200,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0401A483266DE0E20077E5DA /* LaunchScreen.storyboard in Resources */,
+				0401A4A3266E15150077E5DA /* 유닛테스트 정리.txt in Resources */,
 				0401A480266DE0E20077E5DA /* Assets.xcassets in Resources */,
 				0401A47E266DE0E10077E5DA /* Main.storyboard in Resources */,
 			);
