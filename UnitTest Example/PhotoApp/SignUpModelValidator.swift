@@ -10,7 +10,8 @@ import Foundation
 class SignUpModelValidator {
     
     func isFirstNameValid(firstName:String) -> Bool {
-        return firstName.count < 2 ? false : true
+
+        return SignUpConstants.firstNameMinLength...SignUpConstants.firstNameMaxLength ~= firstName.count ? true : false
     }
     
 }

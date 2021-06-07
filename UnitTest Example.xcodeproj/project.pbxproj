@@ -15,6 +15,7 @@
 		0401A483266DE0E20077E5DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0401A481266DE0E20077E5DA /* LaunchScreen.storyboard */; };
 		0401A49B266E0A740077E5DA /* SignUpModelValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0401A49A266E0A740077E5DA /* SignUpModelValidatorTests.swift */; };
 		0401A49E266E0B2A0077E5DA /* SignUpModelValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0401A49D266E0B2A0077E5DA /* SignUpModelValidator.swift */; };
+		0401A4A0266E0E7D0077E5DA /* SignUpConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0401A49F266E0E7D0077E5DA /* SignUpConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		0401A492266DE0F40077E5DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0401A49A266E0A740077E5DA /* SignUpModelValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModelValidatorTests.swift; sourceTree = "<group>"; };
 		0401A49D266E0B2A0077E5DA /* SignUpModelValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModelValidator.swift; sourceTree = "<group>"; };
+		0401A49F266E0E7D0077E5DA /* SignUpConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				0401A49D266E0B2A0077E5DA /* SignUpModelValidator.swift */,
+				0401A49F266E0E7D0077E5DA /* SignUpConstants.swift */,
 			);
 			path = PhotoApp;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 				0401A477266DE0E10077E5DA /* AppDelegate.swift in Sources */,
 				0401A49E266E0B2A0077E5DA /* SignUpModelValidator.swift in Sources */,
 				0401A479266DE0E10077E5DA /* SceneDelegate.swift in Sources */,
+				0401A4A0266E0E7D0077E5DA /* SignUpConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
