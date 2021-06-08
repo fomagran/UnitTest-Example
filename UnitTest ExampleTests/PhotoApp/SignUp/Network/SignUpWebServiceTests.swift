@@ -10,7 +10,6 @@ import XCTest
 
 class SignUpWebServiceTests: XCTestCase {
     
-    let sut:SignUpWebService = SignUpWebService()
 
     override func setUp() {
         
@@ -20,6 +19,9 @@ class SignUpWebServiceTests: XCTestCase {
         
     }
     func testSignUpWebService_WhenGivenSuccessfulResponse_ReturnSuccess() {
+        
+        let sut = SignUpWebService(urlString:"")
+            
         let signUpRequestModel = SignUpRequestModel(firstName: "Foma", lastName: "gran", email: "fomagran6@naver.com", password: "1234")
         let expectation = self.expectation(description: "Signup web service response expectation")
         sut.signUp(with: signUpRequestModel) { response, error in
