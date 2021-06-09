@@ -14,6 +14,10 @@ class SignUpModelValidator {
         return SignUpConstants.firstNameMinLength...SignUpConstants.firstNameMaxLength ~= firstName.count ? true : false
     }
     
+    func isValidPassword(password:String) -> Bool {
+        return password.count >= 8
+    }
+    
     func doPasswordsMatch(password:String,repeatPassword:String) -> Bool {
 
         return password == repeatPassword

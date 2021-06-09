@@ -41,6 +41,15 @@ class SignUpModelValidatorTests: XCTestCase {
         XCTAssertFalse(isFirstNameValid,"The isFirstNameValid() should have returned FALSE for a first name that is longer than \(SignUpConstants.firstNameMaxLength) charaters but it has returned TRUE")
     }
     
+    func testSignUpModelValidator_WhenValidPasswordProvided_ShouldReturnTrue() {
+            
+        //Act
+        let isPasswordValid = systemUnderTest.isValidPassword(password: "12345678")
+        
+        //Assert
+        XCTAssertTrue(isPasswordValid,"The isPasswordValid() should have returned TRUE for a valid password but returned FALSE")
+    }
+    
     func testSignUpModelValidator_WhenEqualPasswordProvided_ShouldReturnTrue() {
         
         let doPasswordsMatch = systemUnderTest.doPasswordsMatch(password: "1234", repeatPassword: "1234")
