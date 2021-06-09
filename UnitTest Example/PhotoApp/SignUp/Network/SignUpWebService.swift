@@ -17,9 +17,9 @@ class SignUpWebService {
         self.urlSession = urlSession
     }
     
-    func signUp(with requestModel:SignUpRequestModel,completion:@escaping(SignUpResponseModel?,SignUpErrors?)-> Void) {
+    func signUp(with requestModel:SignUpRequestModel,completion:@escaping(SignUpResponseModel?,SignUpError?)-> Void) {
         guard let url = URL(string: urlString) else {
-            completion(nil,SignUpErrors.invalidRequestURLStringError)
+            completion(nil,SignUpError.invalidRequestURLString)
             return
         }
         
@@ -35,7 +35,7 @@ class SignUpWebService {
             if let data = data,let signUpResponseModel = try? JSONDecoder().decode(SignUpResponseModel.self, from: data) {
                 completion(signUpResponseModel,nil)
             }else {
-                completion(nil,SignUpErrors.responseModelParsingError)
+                completion(nil,SignUpError.invalidResponseModel)
             }
         }
         dataTask.resume()
