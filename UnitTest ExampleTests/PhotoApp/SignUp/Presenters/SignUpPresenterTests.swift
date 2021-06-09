@@ -62,4 +62,21 @@ class SignUpPresenterTests: XCTestCase {
         XCTAssertEqual(mcokSignUpViewDelegate.successfulSignUpCounter, 1,"The successfulSignUpCounter() method was called more than one time ")
     }
     
+    func testSignupPresenter_WhenSignupOperationFail_ShouldCallErrorOnDelegate() {
+        
+        let errorExpectation = expectation(description: "Expected the errorHandler() method to be called")
+        
+        mcokSignUpViewDelegate.expectation = errorExpectation
+        mockSignUpWebService.shouldReturnError = true
+        
+        sut.processUserSignUp(model: signUpModel)
+        
+        self.wait(for: [errorExpectation], timeout: 5)
+        
+        XCTAssertEqual(mcokSignUpViewDelegate.successfulSignUpCounter, 0)
+        XCTAssertEqual(mcokSignUpViewDelegate.errorHandlerCounter, 1)
+        XCTAssertNotNil(mcokSignUpViewDelegate.signUpError)
+        
+    }
+    
 }

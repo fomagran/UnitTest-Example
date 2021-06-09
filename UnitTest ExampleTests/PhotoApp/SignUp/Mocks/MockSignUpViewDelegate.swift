@@ -13,6 +13,8 @@ class MockSignUpViewDelegate:SignUpViewDelegateProtocol {
     
     var expectation:XCTestExpectation?
     var successfulSignUpCounter:Int = 0
+    var errorHandlerCounter:Int = 0
+    var signUpError:SignUpError?
     
     func successfulSignUp() {
         successfulSignUpCounter += 1
@@ -20,7 +22,9 @@ class MockSignUpViewDelegate:SignUpViewDelegateProtocol {
     }
     
     func errorHandler(error: SignUpError) {
-        
+        signUpError = error
+        errorHandlerCounter += 1
+        expectation?.fulfill()
     }
 
 }

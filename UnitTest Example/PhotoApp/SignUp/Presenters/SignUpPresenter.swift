@@ -33,6 +33,11 @@ class SignUpPresenter {
         let requestModel = SignUpRequestModel(firstName: model.firstName, lastName: model.lastName, email: model.email, password: model.password)
         
         webservice.signUp(with: requestModel) { [weak self] response, error in
+            
+            if let error = error {
+                self?.delegate.errorHandler(error:error)
+            }
+            
             if let _ = response {
                 self?.delegate.successfulSignUp()
                 return
