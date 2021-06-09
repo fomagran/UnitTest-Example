@@ -25,7 +25,7 @@ class SignUpPresenterTests: XCTestCase {
         
         let mockSignUpModelValidator = MockSignUpModelValidator()
         
-        let sut = SignUpPresenter()
+        let sut = SignUpPresenter(validator:mockSignUpModelValidator)
         
         sut.processUserSignUp(model:signUpModel)
         

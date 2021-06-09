@@ -9,5 +9,15 @@ import Foundation
 
 class SignUpPresenter {
     
-    func processUserSignUp(model:SignUpModel) {}
+    private var validator:SignUpModelValidatorProtocol
+    
+    init(validator:SignUpModelValidatorProtocol) {
+        self.validator = validator
+    }
+    
+    func processUserSignUp(model:SignUpModel) {
+        if !validator.isFirstNameValid(firstName: model.firstName) {
+            return
+        }
+    }
 }

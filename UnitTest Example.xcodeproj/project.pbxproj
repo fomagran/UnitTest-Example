@@ -132,7 +132,6 @@
 			isa = PBXGroup;
 			children = (
 				04F58BED266F709F00AA97AD /* SignUp */,
-				04F68D8A26706910000B1A31 /* SignUpModelValidatorProtocol.swift */,
 			);
 			path = PhotoApp;
 			sourceTree = "<group>";
@@ -144,6 +143,7 @@
 				04F58BEF266F70F900AA97AD /* Controllers */,
 				04F58BEE266F70B900AA97AD /* Models */,
 				04F68D8626706817000B1A31 /* SignUpPresenter.swift */,
+				04F68D8A26706910000B1A31 /* SignUpModelValidatorProtocol.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";

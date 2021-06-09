@@ -9,10 +9,10 @@ import Foundation
 
 protocol SignUpModelValidatorProtocol {
     
-    func isFirstNameValid(firstName:String)
+    func isFirstNameValid(firstName:String) -> Bool
     
-    func isValidPassword(password:String)
+    func isValidPassword(password:String) -> Bool
     
-    func doPasswordsMatch(password:String,repeatPassword:String)
+    func doPasswordsMatch(password:String,repeatPassword:String) -> Bool
     
 }
