@@ -16,21 +16,21 @@ class SignUpPresenterTests: XCTestCase {
     var mcokSignUpViewDelegate:MockSignUpViewDelegate!
     var sut:SignUpPresenter!
     
-
+    
     override func setUp() {
-         signUpModel = SignUpModel(firstName:"Foma",lastName:"gran",email:"fomagran6@naver.com",password:"12345678",repeatPassword:"12345678")
-        
-         mockSignUpModelValidator = MockSignUpModelValidator()
-        
-         mockSignUpWebService = MockSignUpWebService()
-        
+        signUpModel = SignUpModel(firstName:"Foma",lastName:"gran",email:"fomagran6@naver.com",password:"12345678",repeatPassword:"12345678")
+        mockSignUpModelValidator = MockSignUpModelValidator()
+        mockSignUpWebService = MockSignUpWebService()
         mcokSignUpViewDelegate = MockSignUpViewDelegate()
-        
         sut = SignUpPresenter(validator:mockSignUpModelValidator,webservice: mockSignUpWebService,delegate:mcokSignUpViewDelegate)
     }
-
+    
     override func tearDown() {
-        
+        signUpModel = nil
+        mockSignUpModelValidator = nil
+        mockSignUpWebService = nil
+        mcokSignUpViewDelegate = nil
+        sut = nil
     }
     
     func testSignupPresenter_WhenInformationProvided_WillValidateEachProperty() {
@@ -59,7 +59,7 @@ class SignUpPresenterTests: XCTestCase {
         
         self.wait(for: [expectation], timeout: 5)
         
-        XCTAssertEqual(mcokSignUpViewDelegate.successfulSignUpCounter, 1)
+        XCTAssertEqual(mcokSignUpViewDelegate.successfulSignUpCounter, 1,"The successfulSignUpCounter() method was called more than one time ")
     }
-
+    
 }
