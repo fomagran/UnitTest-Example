@@ -58,6 +58,8 @@ class SignUpPresenterTests: XCTestCase {
         sut.processUserSignUp(model: signUpModel)
         
         self.wait(for: [expectation], timeout: 5)
+        
+        XCTAssertEqual(mcokSignUpViewDelegate.successfulSignUpCounter, 1)
     }
 
 }
