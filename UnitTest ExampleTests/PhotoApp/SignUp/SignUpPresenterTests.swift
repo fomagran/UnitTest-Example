@@ -30,6 +30,8 @@ class SignUpPresenterTests: XCTestCase {
         sut.processUserSignUp(model:signUpModel)
         
         XCTAssertTrue(mockSignUpModelValidator.isFirstNameValidated)
+        XCTAssertTrue(mockSignUpModelValidator.isValidPassword)
+
     }
 
 }

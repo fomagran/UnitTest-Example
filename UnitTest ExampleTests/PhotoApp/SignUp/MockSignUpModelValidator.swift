@@ -11,6 +11,7 @@ import Foundation
 class MockSignUpModelValidator:SignUpModelValidatorProtocol {
     
     var isFirstNameValidated:Bool = false
+    var isValidPassword:Bool = false
     
 
     func isFirstNameValid(firstName: String) -> Bool {
@@ -19,7 +20,8 @@ class MockSignUpModelValidator:SignUpModelValidatorProtocol {
     }
     
     func isValidPassword(password: String)  -> Bool {
-        return true
+        isValidPassword = true
+        return isValidPassword
     }
     
     func doPasswordsMatch(password: String, repeatPassword: String)  -> Bool {

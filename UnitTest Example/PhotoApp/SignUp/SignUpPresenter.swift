@@ -19,5 +19,8 @@ class SignUpPresenter {
         if !validator.isFirstNameValid(firstName: model.firstName) {
             return
         }
+        if !validator.isValidPassword(password: model.password) {
+            return
+        }
     }
 }
