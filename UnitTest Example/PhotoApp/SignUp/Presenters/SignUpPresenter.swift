@@ -7,13 +7,14 @@
 
 import Foundation
 
-class SignUpPresenter {
+class SignUpPresenter:SignupPresenterProtocol {
     
     private var validator:SignUpModelValidatorProtocol
     private var webservice:SignUpWebServiceProtocol
     private var delegate:SignUpViewDelegateProtocol
     
-    init(validator:SignUpModelValidatorProtocol,webservice:SignUpWebServiceProtocol,delegate:SignUpViewDelegateProtocol) {
+    //프로토콜을 채택하면 required 붙여줘야함
+    required init(validator:SignUpModelValidatorProtocol,webservice:SignUpWebServiceProtocol,delegate:SignUpViewDelegateProtocol) {
         self.validator = validator
         self.webservice = webservice
         self.delegate = delegate

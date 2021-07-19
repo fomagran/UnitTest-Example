@@ -18,6 +18,8 @@
 		0401A4A0266E0E7D0077E5DA /* SignUpConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0401A49F266E0E7D0077E5DA /* SignUpConstants.swift */; };
 		0401A4A3266E15150077E5DA /* 유닛테스트 정리.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0401A4A2266E15150077E5DA /* 유닛테스트 정리.txt */; };
 		0492C44D26A520F8000C3056 /* SignupViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0492C44C26A520F8000C3056 /* SignupViewControllerTests.swift */; };
+		0492C45126A52685000C3056 /* MockSignupPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0492C45026A52685000C3056 /* MockSignupPresenter.swift */; };
+		0492C45326A526C3000C3056 /* SignupPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0492C45226A526C3000C3056 /* SignupPresenterProtocol.swift */; };
 		04F58BE4266F6DF900AA97AD /* SignUpWebServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F58BE3266F6DF900AA97AD /* SignUpWebServiceTests.swift */; };
 		04F58BE6266F6E5A00AA97AD /* SignUpWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F58BE5266F6E5A00AA97AD /* SignUpWebService.swift */; };
 		04F58BE8266F6EDB00AA97AD /* SignUpRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F58BE7266F6EDB00AA97AD /* SignUpRequestModel.swift */; };
@@ -61,6 +63,8 @@
 		0401A49F266E0E7D0077E5DA /* SignUpConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpConstants.swift; sourceTree = "<group>"; };
 		0401A4A2266E15150077E5DA /* 유닛테스트 정리.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "유닛테스트 정리.txt"; sourceTree = "<group>"; };
 		0492C44C26A520F8000C3056 /* SignupViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewControllerTests.swift; sourceTree = "<group>"; };
+		0492C45026A52685000C3056 /* MockSignupPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSignupPresenter.swift; sourceTree = "<group>"; };
+		0492C45226A526C3000C3056 /* SignupPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPresenterProtocol.swift; sourceTree = "<group>"; };
 		04F58BE3266F6DF900AA97AD /* SignUpWebServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpWebServiceTests.swift; sourceTree = "<group>"; };
 		04F58BE5266F6E5A00AA97AD /* SignUpWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpWebService.swift; sourceTree = "<group>"; };
 		04F58BE7266F6EDB00AA97AD /* SignUpRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRequestModel.swift; sourceTree = "<group>"; };
@@ -237,6 +241,7 @@
 				04F68D8A26706910000B1A31 /* SignUpModelValidatorProtocol.swift */,
 				04F68D9226706E46000B1A31 /* SignUpWebServiceProtocol.swift */,
 				04F68D962670710E000B1A31 /* SignUpViewDelegateProtocol.swift */,
+				0492C45226A526C3000C3056 /* SignupPresenterProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -256,6 +261,7 @@
 				04F68D8026705973000B1A31 /* MockURLProtocol.swift */,
 				04F68D9026706DCE000B1A31 /* MockSignUpWebService.swift */,
 				04F68D94267070C8000B1A31 /* MockSignUpViewDelegate.swift */,
+				0492C45026A52685000C3056 /* MockSignupPresenter.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -370,6 +376,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0492C45326A526C3000C3056 /* SignupPresenterProtocol.swift in Sources */,
 				04F58BE6266F6E5A00AA97AD /* SignUpWebService.swift in Sources */,
 				0401A47B266DE0E10077E5DA /* SignupViewController.swift in Sources */,
 				04F58BEA266F6FF900AA97AD /* SignUpResponseModel.swift in Sources */,
@@ -391,6 +398,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0492C45126A52685000C3056 /* MockSignupPresenter.swift in Sources */,
 				04F68D8126705973000B1A31 /* MockURLProtocol.swift in Sources */,
 				04F68D89267068A4000B1A31 /* MockSignUpModelValidator.swift in Sources */,
 				0492C44D26A520F8000C3056 /* SignupViewControllerTests.swift in Sources */,

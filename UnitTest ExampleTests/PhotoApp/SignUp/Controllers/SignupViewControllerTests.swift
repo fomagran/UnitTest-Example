@@ -41,5 +41,17 @@ class SignupViewControllerTests: XCTestCase {
         //tapSignupButton 액션이 있는지 확인 반드시 : 붙여줘야함
         XCTAssertEqual(signupButtonActions.first,"tapSignupButton:")
     }
+    
+    func testSignupViewController_WhenSignupButtonTapped_InvokeSignupProcess() throws {
+        let mockValidator = MockSignUpModelValidator()
+        let mockWebservice = MockSignUpWebService()
+        let mockDelegate = MockSignUpViewDelegate()
+        let mockSignupPresenter = MockSignupPresenter(validator:mockValidator , webservice: mockWebservice, delegate: mockDelegate)
+        
+        sut.signupPresenter = mockSignupPresenter
+        
+        sut.signupButton.sendActions(for: .touchUpInside)
+        XCTAssertTrue(mockSignupPresenter.processUserSignupCalled)
+    }
 
 }
