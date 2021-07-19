@@ -7,8 +7,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SignupViewController: UIViewController {
 
+    @IBOutlet weak var repeatTF: UITextField!
+    @IBOutlet weak var passwordTF: UITextField!
+    @IBOutlet weak var firstNameTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
