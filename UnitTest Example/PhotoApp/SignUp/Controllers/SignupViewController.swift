@@ -9,6 +9,7 @@ import UIKit
 
 class SignupViewController: UIViewController {
 
+    @IBOutlet weak var signupButton: UIButton!
     @IBOutlet weak var repeatTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var firstNameTextField: UITextField!
@@ -17,6 +18,8 @@ class SignupViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func tapSignupButton(_ sender: Any) {
+    }
+    
 }
 

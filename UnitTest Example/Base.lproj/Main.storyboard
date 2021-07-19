@@ -36,11 +36,20 @@
                                     </textField>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8xg-Rh-Pmv">
+                                <rect key="frame" x="180" y="438" width="54" height="30"/>
+                                <state key="normal" title="Sign Up"/>
+                                <connections>
+                                    <action selector="tapSignupButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qyj-VY-y6B"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="zV1-D7-Oj9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="N1a-Dx-S5Y"/>
+                            <constraint firstItem="8xg-Rh-Pmv" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Ufz-0N-4wR"/>
+                            <constraint firstItem="8xg-Rh-Pmv" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="igj-dl-8Bk"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zV1-D7-Oj9" secondAttribute="trailing" constant="20" id="naG-Kw-IQt"/>
                             <constraint firstItem="zV1-D7-Oj9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="sw4-6e-yXa"/>
                         </constraints>
@@ -49,6 +58,7 @@
                         <outlet property="firstNameTextField" destination="ZbV-Er-NoI" id="u1p-So-Sns"/>
                         <outlet property="passwordTF" destination="U5D-OE-3Go" id="0DM-cZ-oDb"/>
                         <outlet property="repeatTF" destination="uH9-Am-vzZ" id="dlp-qF-KPh"/>
+                        <outlet property="signupButton" destination="8xg-Rh-Pmv" id="Fye-cg-jSb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

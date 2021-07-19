@@ -33,5 +33,13 @@ class SignupViewControllerTests: XCTestCase {
         XCTAssertEqual(passwordTF.text, "")
         XCTAssertEqual(repeatTF.text, "")
     }
+    
+    func testSignupViewController_WhenCreated_HasSignupButtonAndAction() throws {
+        let signupButton:UIButton = try XCTUnwrap(sut.signupButton,"Signup button does not have a referencing outlet")
+        let signupButtonActions = try XCTUnwrap(signupButton.actions(forTarget: sut, forControlEvent: .touchUpInside),"Signup button does not have a referencing outlet")
+        XCTAssertEqual(signupButtonActions.count, 1)
+        //tapSignupButton 액션이 있는지 확인 반드시 : 붙여줘야함
+        XCTAssertEqual(signupButtonActions.first,"tapSignupButton:")
+    }
 
 }
