@@ -24,10 +24,14 @@ class SignupViewControllerTests: XCTestCase {
         
     }
     
-    func testSignupViewController_WhenCreated_HasRequiredTextFieldsEmpty() {
-        XCTAssertEqual(sut.firstNameTextField.text, "")
-        XCTAssertEqual(sut.passwordTF.text, "")
-        XCTAssertEqual(sut.repeatTF.text, "")
+    func testSignupViewController_WhenCreated_HasRequiredTextFieldsEmpty() throws {
+        //outlet이 연결되었는지 안되었는지 확인할 수 있다.
+        let firstNameTextField = try XCTUnwrap(sut.firstNameTextField)
+        let passwordTF = try XCTUnwrap(sut.passwordTF)
+        let repeatTF = try XCTUnwrap(sut.repeatTF)
+        XCTAssertEqual(firstNameTextField.text, "")
+        XCTAssertEqual(passwordTF.text, "")
+        XCTAssertEqual(repeatTF.text, "")
     }
 
 }
