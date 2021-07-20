@@ -68,5 +68,9 @@ class SignUpModelValidatorTests: XCTestCase {
             XCTAssertEqual(error as? SignUpError,SignUpError.illigalCharatersFound)
         }
     }
+    
+    func testSignUpModelValidator_WhenValidCharaterProvided_ShouldNotThrowsError() {
+        XCTAssertNoThrow(try systemUnderTest.isFirstNameValid(firstName: "a"),"제대로 된 성에는 에러를 발생시키면 안돼!")
+    }
 
 }
