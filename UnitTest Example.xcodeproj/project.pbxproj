@@ -18,6 +18,7 @@
 		0401A4A0266E0E7D0077E5DA /* SignUpConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0401A49F266E0E7D0077E5DA /* SignUpConstants.swift */; };
 		0401A4A3266E15150077E5DA /* 유닛테스트 정리.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0401A4A2266E15150077E5DA /* 유닛테스트 정리.txt */; };
 		04767A9526A655C00044DFD7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04767A9426A655C00044DFD7 /* MainViewController.swift */; };
+		04767AA526A660E90044DFD7 /* SignupFlowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04767AA426A660E90044DFD7 /* SignupFlowUITests.swift */; };
 		0492C44D26A520F8000C3056 /* SignupViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0492C44C26A520F8000C3056 /* SignupViewControllerTests.swift */; };
 		0492C45126A52685000C3056 /* MockSignupPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0492C45026A52685000C3056 /* MockSignupPresenter.swift */; };
 		0492C45326A526C3000C3056 /* SignupPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0492C45226A526C3000C3056 /* SignupPresenterProtocol.swift */; };
@@ -46,6 +47,13 @@
 			remoteGlobalIDString = 0401A472266DE0E10077E5DA;
 			remoteInfo = "UnitTest Example";
 		};
+		04767A9F26A660BE0044DFD7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0401A46B266DE0E10077E5DA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0401A472266DE0E10077E5DA;
+			remoteInfo = "UnitTest Example";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +72,9 @@
 		0401A49F266E0E7D0077E5DA /* SignUpConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpConstants.swift; sourceTree = "<group>"; };
 		0401A4A2266E15150077E5DA /* 유닛테스트 정리.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "유닛테스트 정리.txt"; sourceTree = "<group>"; };
 		04767A9426A655C00044DFD7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		04767A9A26A660BE0044DFD7 /* UnitTest ExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UnitTest ExampleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		04767A9E26A660BE0044DFD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04767AA426A660E90044DFD7 /* SignupFlowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupFlowUITests.swift; sourceTree = "<group>"; };
 		0492C44C26A520F8000C3056 /* SignupViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewControllerTests.swift; sourceTree = "<group>"; };
 		0492C45026A52685000C3056 /* MockSignupPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSignupPresenter.swift; sourceTree = "<group>"; };
 		0492C45226A526C3000C3056 /* SignupPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPresenterProtocol.swift; sourceTree = "<group>"; };
@@ -99,6 +110,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		04767A9726A660BE0044DFD7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -107,6 +125,7 @@
 			children = (
 				0401A475266DE0E10077E5DA /* UnitTest Example */,
 				0401A48F266DE0F40077E5DA /* UnitTest ExampleTests */,
+				04767A9B26A660BE0044DFD7 /* UnitTest ExampleUITests */,
 				0401A474266DE0E10077E5DA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -116,6 +135,7 @@
 			children = (
 				0401A473266DE0E10077E5DA /* UnitTest Example.app */,
 				0401A48E266DE0F40077E5DA /* UnitTest ExampleTests.xctest */,
+				04767A9A26A660BE0044DFD7 /* UnitTest ExampleUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -150,6 +170,15 @@
 				04F58BED266F709F00AA97AD /* SignUp */,
 			);
 			path = PhotoApp;
+			sourceTree = "<group>";
+		};
+		04767A9B26A660BE0044DFD7 /* UnitTest ExampleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				04767AA426A660E90044DFD7 /* SignupFlowUITests.swift */,
+				04767A9E26A660BE0044DFD7 /* Info.plist */,
+			);
+			path = "UnitTest ExampleUITests";
 			sourceTree = "<group>";
 		};
 		0492C44B26A520E2000C3056 /* Controllers */ = {
@@ -315,6 +344,24 @@
 			productReference = 0401A48E266DE0F40077E5DA /* UnitTest ExampleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		04767A9926A660BE0044DFD7 /* UnitTest ExampleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04767AA126A660BE0044DFD7 /* Build configuration list for PBXNativeTarget "UnitTest ExampleUITests" */;
+			buildPhases = (
+				04767A9626A660BE0044DFD7 /* Sources */,
+				04767A9726A660BE0044DFD7 /* Frameworks */,
+				04767A9826A660BE0044DFD7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04767AA026A660BE0044DFD7 /* PBXTargetDependency */,
+			);
+			name = "UnitTest ExampleUITests";
+			productName = "UnitTest ExampleUITests";
+			productReference = 04767A9A26A660BE0044DFD7 /* UnitTest ExampleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -330,6 +377,10 @@
 					0401A48D266DE0F30077E5DA = {
 						CreatedOnToolsVersion = 12.5;
 						LastSwiftMigration = 1250;
+						TestTargetID = 0401A472266DE0E10077E5DA;
+					};
+					04767A9926A660BE0044DFD7 = {
+						CreatedOnToolsVersion = 12.5.1;
 						TestTargetID = 0401A472266DE0E10077E5DA;
 					};
 				};
@@ -349,6 +400,7 @@
 			targets = (
 				0401A472266DE0E10077E5DA /* UnitTest Example */,
 				0401A48D266DE0F30077E5DA /* UnitTest ExampleTests */,
+				04767A9926A660BE0044DFD7 /* UnitTest ExampleUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -366,6 +418,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		0401A48C266DE0F30077E5DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04767A9826A660BE0044DFD7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -414,6 +473,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		04767A9626A660BE0044DFD7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04767AA526A660E90044DFD7 /* SignupFlowUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -421,6 +488,11 @@
 			isa = PBXTargetDependency;
 			target = 0401A472266DE0E10077E5DA /* UnitTest Example */;
 			targetProxy = 0401A493266DE0F40077E5DA /* PBXContainerItemProxy */;
+		};
+		04767AA026A660BE0044DFD7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0401A472266DE0E10077E5DA /* UnitTest Example */;
+			targetProxy = 04767A9F26A660BE0044DFD7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -641,6 +713,44 @@
 			};
 			name = Release;
 		};
+		04767AA226A660BE0044DFD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2F54VR68GM;
+				INFOPLIST_FILE = "UnitTest ExampleUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fomagran.UnitTest-ExampleUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "UnitTest Example";
+			};
+			name = Debug;
+		};
+		04767AA326A660BE0044DFD7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2F54VR68GM;
+				INFOPLIST_FILE = "UnitTest ExampleUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fomagran.UnitTest-ExampleUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "UnitTest Example";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -667,6 +777,15 @@
 			buildConfigurations = (
 				0401A496266DE0F40077E5DA /* Debug */,
 				0401A497266DE0F40077E5DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04767AA126A660BE0044DFD7 /* Build configuration list for PBXNativeTarget "UnitTest ExampleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04767AA226A660BE0044DFD7 /* Debug */,
+				04767AA326A660BE0044DFD7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

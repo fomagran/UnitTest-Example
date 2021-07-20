@@ -37,6 +37,5 @@ class SignupViewController: UIViewController, SignUpViewDelegateProtocol {
         let signupModel = SignUpModel(firstName: "foma", lastName: "gran", email: "fomagran6@naver.com", password: "1234", repeatPassword: "1234")
         signupPresenter?.processUserSignUp(model: signupModel)
     }
-    
 }
 

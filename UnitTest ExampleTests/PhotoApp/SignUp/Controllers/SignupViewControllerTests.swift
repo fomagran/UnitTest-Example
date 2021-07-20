@@ -67,6 +67,7 @@ class SignupViewControllerTests: XCTestCase {
         XCTAssertTrue(passwordTF.isSecureTextEntry,"비밀번호는 SecureTextEntry로 설정되어야 하는데 그렇지 않네요")
     }
     
+    //이건 될때가 있고 안될떄가 있네?...왜 이럴까?
     func testSignupButton_WhenTapped_PushMainViewController() {
         
         let myPredicate = NSPredicate { input, _ in
@@ -77,6 +78,7 @@ class SignupViewControllerTests: XCTestCase {
         
         sut.signupButton.sendActions(for: .touchUpInside)
         
+        //푸쉬되는 애니메이션에 걸리는 시간이 있어서 딜레이를 줘야함.
         waitForExpectations(timeout: 1)
     }
 
