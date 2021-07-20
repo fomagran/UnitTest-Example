@@ -53,5 +53,15 @@ class SignupViewControllerTests: XCTestCase {
         sut.signupButton.sendActions(for: .touchUpInside)
         XCTAssertTrue(mockSignupPresenter.processUserSignupCalled)
     }
+    
+    func testFirstNameTextField_WhenCreated_HasGivenNameContentTypeSet() throws {
+        let firstNameTF = try XCTUnwrap(sut.firstNameTextField)
+        XCTAssertEqual(firstNameTF.textContentType, .givenName,"FirstName 텍스트필드 컨텐트타입은 GivenName이어야 하는데 그렇지 않네요")
+    }
+    
+    func testPasswordTextField_WhenCreated_HasSecureTextEntrySet() throws {
+        let passwordTF = try XCTUnwrap(sut.passwordTF)
+        XCTAssertTrue(passwordTF.isSecureTextEntry,"비밀번호는 SecureTextEntry로 설정되어야 하는데 그렇지 않네요")
+    }
 
 }
