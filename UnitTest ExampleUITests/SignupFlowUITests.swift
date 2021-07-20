@@ -8,36 +8,62 @@
 import XCTest
 
 class SignupFlowUITests: XCTestCase {
-
+    
+    private var app:XCUIApplication!
+    private var emailTF:XCUIElement!
+    private var passwordTF:XCUIElement!
+    private var repeatPasswordTF:XCUIElement!
+    private var signupButton:XCUIElement!
+    
+    
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
+        try super.setUpWithError()
         continueAfterFailure = false
-
-        // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
-        XCUIApplication().launch()
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-
-    func testSignupViewController_WhenviewLoaded_RequiredUIElementsAreEnabled() throws {
-        let app = XCUIApplication()
-        app.launch()
-        let firestNameTextField = app.textFields["First name"]
-        let passwordSecureTextField = app.secureTextFields["Password"]
-        let repeatPasswordSecureTextField = app.secureTextFields["Repeat Password"]
-        let signupButton = app.buttons["Sign Up"]
         
-        XCTAssertTrue(firestNameTextField.isEnabled)
-        XCTAssertTrue(passwordSecureTextField.isEnabled)
-        XCTAssertTrue(repeatPasswordSecureTextField.isEnabled)
+        app = XCUIApplication()
+        app.launch()
+        
+        emailTF = app.textFields["emailTF"]
+        passwordTF = app.textFields["passwordTF"]
+        repeatPasswordTF = app.textFields["repeatPasswordTF"]
+        signupButton = app.buttons["signupButton"]
+        
+    }
+    
+    override func tearDownWithError() throws {
+        app = nil
+        emailTF = nil
+        passwordTF = nil
+        repeatPasswordTF = nil
+        signupButton = nil
+        try super.tearDownWithError()
+    }
+    
+    
+    func testSignupViewController_WhenviewLoaded_RequiredUIElementsAreEnabled() throws {
+        
+        XCTAssertTrue(emailTF.isEnabled)
+        XCTAssertTrue(passwordTF.isEnabled)
+        XCTAssertTrue(repeatPasswordTF.isEnabled)
         XCTAssertTrue(signupButton.isEnabled)
     }
-
+    
+        func testSignupViewController_DonotMatchPasswordAndRepeatPassword_PresentErrorAlertDialog() {
+        
+        //Act
+        emailTF.tap()
+        emailTF.typeText("fomagran6@naver.com")
+        
+        passwordTF.tap()
+        passwordTF.typeText("12345678")
+        
+        repeatPasswordTF.tap()
+        repeatPasswordTF.typeText("123456")
+        
+            XCUIApplication()/*@START_MENU_TOKEN@*/.textFields["emailTF"]/*[[".textFields[\"email\"]",".textFields[\"emailTF\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        signupButton.tap()
+        
+        //Assert
+        XCTAssertTrue(app.alerts["errorAlertDialog"].waitForExistence(timeout: 1),"잘못된 정보를 입력하면 경고창이 떠야하는데 안떴어요")
+    }
 }

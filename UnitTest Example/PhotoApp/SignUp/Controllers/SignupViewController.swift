@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SignupViewController: UIViewController, SignUpViewDelegateProtocol {
+class SignupViewController: UIViewController {
 
     @IBOutlet weak var signupButton: UIButton!
     @IBOutlet weak var repeatTF: UITextField!
@@ -25,17 +25,36 @@ class SignupViewController: UIViewController, SignUpViewDelegateProtocol {
         }
     }
     
+
+    @IBAction func tapSignupButton(_ sender: Any) {
+        let signupModel = SignUpModel(firstName: firstNameTextField.text ?? "", lastName: "gran", email: "fomagran6@naver.com", password: passwordTF.text ?? "", repeatPassword: repeatTF.text ?? "")
+//        signupPresenter?.processUserSignUp(model: signupModel)
+        
+        if passwordTF.text != repeatTF.text {
+            let alert = UIAlertController(title: "Error", message:"비밀번호와 확인 비밀번호가 다릅니다", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            DispatchQueue.main.async {
+                //테스트를 위해 accessibilityIdentifier를 정해줘야함
+                alert.view.accessibilityIdentifier = "errorAlertDialog"
+                self.present(alert, animated: true, completion: nil)
+            }
+        }
+    }
+}
+
+extension SignupViewController:SignUpViewDelegateProtocol {
     func successfulSignUp() {
         //TODO:
     }
     
     func errorHandler(error: SignUpError) {
-        //TODO:
-    }
-
-    @IBAction func tapSignupButton(_ sender: Any) {
-        let signupModel = SignUpModel(firstName: "foma", lastName: "gran", email: "fomagran6@naver.com", password: "1234", repeatPassword: "1234")
-        signupPresenter?.processUserSignUp(model: signupModel)
+        let alert = UIAlertController(title: "Error", message:error.localizedDescription, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        DispatchQueue.main.async {
+            //테스트를 위해 accessibilityIdentifier를 정해줘야함
+            alert.view.accessibilityIdentifier = "errorAlertDialog"
+            self.present(alert, animated: true, completion: nil)
+        }
     }
 }
 

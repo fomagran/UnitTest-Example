@@ -9,11 +9,7 @@ import Foundation
 
 class SignUpModelValidator:SignUpModelValidatorProtocol {
 
-    func isFirstNameValid(firstName:String) throws -> Bool {
-        
-        if firstName.contains("@") {
-            throw SignUpError.illigalCharatersFound
-        }
+    func isFirstNameValid(firstName:String) -> Bool {
 
         return SignUpConstants.firstNameMinLength...SignUpConstants.firstNameMaxLength ~= firstName.count ? true : false
     }
@@ -23,7 +19,7 @@ class SignUpModelValidator:SignUpModelValidatorProtocol {
     }
     
     func doPasswordsMatch(password:String,repeatPassword:String) -> Bool {
-
+        
         return password == repeatPassword
     }
     

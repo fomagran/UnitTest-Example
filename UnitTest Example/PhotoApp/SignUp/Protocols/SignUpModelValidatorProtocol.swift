@@ -9,7 +9,7 @@ import Foundation
 
 protocol SignUpModelValidatorProtocol {
     
-    func isFirstNameValid(firstName:String) throws -> Bool
+    func isFirstNameValid(firstName:String) -> Bool
     
     func isValidPassword(password:String) -> Bool
     

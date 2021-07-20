@@ -20,14 +20,17 @@ class SignUpPresenter:SignupPresenterProtocol {
         self.delegate = delegate
     }
     
-    func processUserSignUp(model:SignUpModel) {
-        if try! !validator.isFirstNameValid(firstName: model.firstName) {
+    func processUserSignUp(model:SignUpModel)  {
+
+        if !validator.isFirstNameValid(firstName: model.firstName) {
             return
         }
         if !validator.isValidPassword(password: model.password) {
             return
         }
-        if !validator.doPasswordsMatch(password: "1234", repeatPassword: "1234") {
+        
+        if !validator.doPasswordsMatch(password: model.password, repeatPassword: model.repeatPassword) {
+            delegate.errorHandler(error: SignUpError.donotMatchRepeatPassword)
             return
         }
         

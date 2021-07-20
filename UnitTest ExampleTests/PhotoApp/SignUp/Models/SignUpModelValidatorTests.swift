@@ -23,7 +23,7 @@ class SignUpModelValidatorTests: XCTestCase {
     func testSignUpModelValidator_WhenValidFirstNameProvided_ShouldReturnTrue() {
             
         //Act
-        let isFirstNameValid = try! systemUnderTest.isFirstNameValid(firstName:"An")
+        let isFirstNameValid = systemUnderTest.isFirstNameValid(firstName:"An")
         
         //Assert
         XCTAssertTrue(isFirstNameValid,"The isFirstNameValid() should have returned TRUE for a valid first name but returned FALSE")
@@ -31,13 +31,13 @@ class SignUpModelValidatorTests: XCTestCase {
     
     func testSignUpModelValidator_WhenTooShortFirstNameProvided_ShouldReturnFalse() {
         
-        let isFirstNameValid = try! systemUnderTest.isFirstNameValid(firstName: "a")
+        let isFirstNameValid =  systemUnderTest.isFirstNameValid(firstName: "a")
         XCTAssertFalse(isFirstNameValid,"The isFirstNameValid() should have returned FALSE for a first name that is shorter than \(SignUpConstants.firstNameMinLength) charaters but it has returned TRUE")
     }
     
     func testSignUpModelValidator_WhenTooLongFirstNameProvided_ShouldReturnFalse() {
         
-        let isFirstNameValid = try! systemUnderTest.isFirstNameValid(firstName: "aasdfsdasdfas")
+        let isFirstNameValid =  systemUnderTest.isFirstNameValid(firstName: "aasdfsdasdfas")
         XCTAssertFalse(isFirstNameValid,"The isFirstNameValid() should have returned FALSE for a first name that is longer than \(SignUpConstants.firstNameMaxLength) charaters but it has returned TRUE")
     }
     
@@ -62,12 +62,12 @@ class SignUpModelValidatorTests: XCTestCase {
         XCTAssertFalse(doPasswordsMatch,"The doPasswordsMatch should have returned FALSE for matching password but it has returned TRUE")
     }
     
-    func testSignUpModelValidator_WhenContatinsIlligalCharacter_ShouldThrowsError() {
-        XCTAssertThrowsError(try systemUnderTest.isFirstNameValid(firstName: "a@"),"특수문자가 포함되면 안돼요!") {
-            error in
-            XCTAssertEqual(error as? SignUpError,SignUpError.illigalCharatersFound)
-        }
-    }
+//    func testSignUpModelValidator_WhenContatinsIlligalCharacter_ShouldThrowsError() {
+//        XCTAssertThrowsError(try systemUnderTest.isFirstNameValid(firstName: "a@"),"특수문자가 포함되면 안돼요!") {
+//            error in
+//            XCTAssertEqual(error as? SignUpError,SignUpError.illigalCharatersFound)
+//        }
+//    }
     
     func testSignUpModelValidator_WhenValidCharaterProvided_ShouldNotThrowsError() {
         XCTAssertNoThrow(try systemUnderTest.isFirstNameValid(firstName: "a"),"제대로 된 성에는 에러를 발생시키면 안돼!")

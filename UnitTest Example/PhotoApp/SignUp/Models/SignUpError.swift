@@ -12,6 +12,7 @@ enum SignUpError:LocalizedError,Equatable {
     case invalidRequestURLString
     case failedRequest(description:String)
     case illigalCharatersFound
+    case donotMatchRepeatPassword
     
     var errorDescription: String? {
         switch self {
@@ -20,7 +21,9 @@ enum SignUpError:LocalizedError,Equatable {
         case .invalidResponseModel,.invalidRequestURLString:
             return ""
         case .illigalCharatersFound:
-            return "특수문자는 포함되면 안돼요!"
+            return "특수문자는 포함되면 안돼요"
+        case .donotMatchRepeatPassword:
+            return "비밀번호와 확인 비밀번호가 다릅니다."
         }
     }
 }
